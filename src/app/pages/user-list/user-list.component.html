@@ -1,0 +1,21 @@
+<p>user-list works!</p>
+<table>
+  <thead>
+    <th>Number</th>
+    <th>Created At</th>
+    <th>Expire At</th>
+    <th>Amount</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+
+      <td>id: {{u.id}}</td>
+      <td>isowner : {{u.isOwner}}</td>
+      <td>name: {{u.name}}</td>
+      <td>
+          <button (click)="delete(u.id)">Delete</button>
+           <button (click)="create(user)">Create</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
